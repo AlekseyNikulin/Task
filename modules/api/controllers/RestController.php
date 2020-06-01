@@ -45,8 +45,7 @@ class RestController extends Controller
      */
     public function actionTask($id = null)
     {
-        return ($this->modelClass)::find()->where(
-            $id ? ["id" => $id] : []
-        )->cache(\Yii::$app->params['api']['duration'])->asArray()->all();
+        return ($this->modelClass)::find()->andFilterWhere(["id" => $id])
+            ->cache(\Yii::$app->params['api']['duration'])->asArray()->all();
     }
 }
