@@ -9,7 +9,7 @@ use yii\db\Expression;
 class m181019_125300_fill_data_task extends Migration
 {
     /**
-     * @return bool|void
+     * @return bool
      * @throws \yii\db\Exception
      */
     public function safeUp()
@@ -26,6 +26,8 @@ class m181019_125300_fill_data_task extends Migration
         }
         $this->db->createCommand()
             ->batchInsert("task",['title', 'date', 'author', 'status', 'description'],$data)->execute();
+
+        return true;
     }
 
     /**

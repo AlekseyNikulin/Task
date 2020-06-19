@@ -21,6 +21,8 @@ class m181017_132450_create_task extends Migration
             "status" => $this->string(255),
             "description" => $this->text(),
         ]);
+
+        return true;
     }
 
     /**
