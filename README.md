@@ -80,3 +80,9 @@ server {
 php yii db-init
 php yii migrate
 ```
+
+В адресной строке браузера
+
+```
+http://tochka/task
+```
