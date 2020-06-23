@@ -19,11 +19,14 @@ class m200619_113340_create_table_company extends Migration
             'zip' => $this->string(),
             'active' => $this->integer(),
         ], $tableOptions);
-
+        
+        return true;
     }
 
     public function down()
     {
         $this->dropTable('{{%company}}');
+        
+        return true;
     }
 }
